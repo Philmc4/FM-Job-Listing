@@ -8,7 +8,6 @@ function JobListings({
   filteredInfo,
   setFilteredInfo,
 }) {
-  // console.log(filteredInfo);
   const modifiedData = () => {
     if (keywords.length > 0) {
       const newData = jobDescription.filter((d) => {

@@ -6,8 +6,6 @@ function Job({ listing, setKeywords }) {
     ...listing.tools,
   ];
 
-  console.log(listing.logo);
-
   return (
     <div
       className={`job-main-container ${listing.featured ? "featured-border" : ""}`}
