@@ -8,9 +8,10 @@ function JobListings({
   filteredInfo,
   setFilteredInfo,
 }) {
+  // console.log(filteredInfo);
   const modifiedData = () => {
     if (keywords.length > 0) {
-      const newData = filteredInfo.filter((d) => {
+      const newData = jobDescription.filter((d) => {
         return keywords.every((key) => {
           return (
             d.role == key ||

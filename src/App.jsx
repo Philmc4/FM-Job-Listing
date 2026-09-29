@@ -1,12 +1,9 @@
 import "./index.css";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaReact } from "react-icons/fa";
 import JobListings from "./Components/JobListings";
 import Header from "./Components/Header";
 import JobDescription from "./data.json";
 import { useState } from "react";
 import Filter from "./Components/Filter";
-import Job from "./Components/Job";
 
 function App() {
   const [filterKeywords, setFilterKeywords] = useState([]);
