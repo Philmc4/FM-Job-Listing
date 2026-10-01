@@ -7,15 +7,11 @@ function Job({ listing, setKeywords }) {
   ];
 
   return (
-    <div
+    <li
       className={`job-main-container ${listing.featured ? "featured-border" : ""}`}
     >
       <div className="job-information-container">
-        <img
-          src={listing.logo}
-          alt={`Logo for ${listing.company}`}
-          className="logo-image"
-        />
+        <img src={listing.logo} alt="" className="logo-image" />
         <div className="job-information">
           <div className="job-company-container">
             <p className="text-2-bold text-my-green-400">{listing.company}</p>
@@ -24,9 +20,9 @@ function Job({ listing, setKeywords }) {
               {listing.featured && <p className="featured-style">featured</p>}
             </div>
           </div>
-          <p className="text-1 text-my-green-900 hover:text-my-green-400 cursor-pointer">
+          <h2 className="text-1 text-my-green-900 hover:text-my-green-400 cursor-pointer">
             {listing.position}
-          </p>
+          </h2>
           <div className="role-description">
             <p className="text-2-medium text-my-gray-400">{listing.postedAt}</p>
             <div className="attribute-divider"></div>
@@ -50,7 +46,7 @@ function Job({ listing, setKeywords }) {
           </button>
         ))}
       </div>
-    </div>
+    </li>
   );
 }
 

@@ -25,26 +25,28 @@ function App() {
   };
 
   return (
-    <main>
+    <>
       <Header />
-      {filterKeywords.length > 0 && (
-        <Filter
-          keyWords={filterKeywords}
-          setKeywords={setFilterKeywords}
-          removeKeywords={deleteKeywords}
-          handleClear={clearAll}
-          setFilteredInfo={setFilteredInfo}
+      <main>
+        {filterKeywords.length > 0 && (
+          <Filter
+            keyWords={filterKeywords}
+            setKeywords={setFilterKeywords}
+            removeKeywords={deleteKeywords}
+            handleClear={clearAll}
+            setFilteredInfo={setFilteredInfo}
+            jobDescription={JobDescription}
+          />
+        )}
+        <JobListings
+          keywords={filterKeywords}
           jobDescription={JobDescription}
+          setKeywords={addFilterKeywords}
+          filteredInfo={filteredInfo}
+          setFilteredInfo={setFilteredInfo}
         />
-      )}
-      <JobListings
-        keywords={filterKeywords}
-        jobDescription={JobDescription}
-        setKeywords={addFilterKeywords}
-        filteredInfo={filteredInfo}
-        setFilteredInfo={setFilteredInfo}
-      />
-    </main>
+      </main>
+    </>
   );
 }
 

@@ -31,11 +31,11 @@ function JobListings({
   }, [keywords]);
 
   return (
-    <div className="main-job-listings-container">
+    <ul className="main-job-listings-container">
       {filteredInfo.map((job) => (
         <Job key={job.id} listing={job} setKeywords={setKeywords} />
       ))}
-    </div>
+    </ul>
   );
 }
 
